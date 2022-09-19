@@ -17,7 +17,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about__content">
-                    <div className="about__cards">
+                    {/* <div className="about__cards">
                         <article className="about__card">
                             <FaAward className="about__icon" />
                             <h5>Experience</h5>
@@ -33,13 +33,13 @@ const About = () => {
                             <h5>Projects</h5>
                             <small>80+ Completed</small>
                         </article>
-                    </div>
+                    </div> */}
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Autem nesciunt asperiores recusandae reiciendis dicta
-                        sequi officiis quod impedit numquam amet illo laudantium
-                        ea ipsam, temporibus maxime corporis ratione veniam
-                        quasi.
+                        I am a Software Engineering Student, I have good
+                        communication skills. I am Self- motivated, Creative,
+                        Adaptable, and also known for having an eye for details,
+                        I am eager to be challenged in order to grow and further
+                        improve my IT skills.
                     </p>
                     <a href="#contact" className="btn btn-primary">
                         Let's Talk

@@ -1,53 +1,53 @@
 import React from "react";
 import "./portfolio.css";
-import PIC from "../../assets/sorty.png";
-import lool1 from "../../assets/lool1.jpg";
-import lool2 from "../../assets/lool2.jpg";
-import lool3 from "../../assets/lool3.jpg";
-import lool4 from "../../assets/lool4.jpg";
+import sort from "../../assets/sorty.png";
+import portfolio from "../../assets/portfolio1.png";
+import quiz from "../../assets/quizz.jpg";
+import dash from "../../assets/dash.png";
 
 const Portfolio = () => {
     const data = [
         {
             id: 1,
-            img: PIC,
+            img: sort,
             title: "Sorty",
-            desc: "A sorting visualizer web app",
-            github: "#",
-            demo: "#",
+            desc: "Simulates the sorting algorithms, built with ReactJs",
+            github: "https://github.com/Zahra-Elair/Sorty",
+            demo: "https://zahra-elair.github.io/Sorty/",
         },
-        {
-            id: 2,
-            img: lool1,
-            title: "Lool",
-            desc: "A social media web app",
-            github: "#",
-            demo: "#",
-        },
+
         {
             id: 3,
-            img: lool2,
-            title: "Lool",
-            desc: "A social media web app",
-            github: "#",
+            img: dash,
+            title: "Booking System",
+            desc: "web application for tracking time of presence and clocking in, built using Angular, SpringBoot",
+            github: "https://github.com/Zahra-Elair/boocking-system-Frontend",
             demo: "#",
         },
         {
             id: 4,
-            img: lool3,
-            title: "Lool",
-            desc: "A social media web app",
-            github: "#",
-            demo: "#",
+            img: quiz,
+            title: "Quiz App",
+            desc: "A quizz to test your basic knowledge of HTML and CSS, built with ReactJs",
+            github: "https://github.com/Zahra-Elair/quizz_app",
+            demo: "https://zahra-elair.github.io/quizz_app/",
         },
         {
-            id: 5,
-            img: lool4,
-            title: "Lool",
-            desc: "A social media web app",
-            github: "#",
-            demo: "#",
+            id: 2,
+            img: portfolio,
+            title: "My Portfolio",
+            desc: "The one you're browsing now, built with ReactJs",
+            github: "https://github.com/Zahra-Elair/Portfolio",
+            demo: "https://github.com/Zahra-Elair/Portfolio",
         },
+        // {
+        //     id: 5,
+        //     img: lool4,
+        //     title: "Hedwig",
+        //     desc: "A Journal where you can post anonymously",
+        //     github: "https://github.com/Zahra-Elair/Hedwig",
+        //     demo: "#",
+        // },
     ];
 
     return (
