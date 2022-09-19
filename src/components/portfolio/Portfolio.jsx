@@ -38,7 +38,7 @@ const Portfolio = () => {
             title: "My Portfolio",
             desc: "The one you're browsing now, built with ReactJs",
             github: "https://github.com/Zahra-Elair/Portfolio",
-            demo: "https://github.com/Zahra-Elair/Portfolio",
+            demo: "https://zahra-elair.github.io/Portfolio/",
         },
         // {
         //     id: 5,

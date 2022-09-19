@@ -1,6 +1,6 @@
 import React from "react";
 import "./about.css";
-import ME from "../../assets/pic3.png";
+import ME from "../../assets/vector.png";
 import { FaAward, FaRegFolderOpen } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 
@@ -35,11 +35,11 @@ const About = () => {
                         </article>
                     </div> */}
                     <p>
-                        I am a Software Engineering Student, I have good
-                        communication skills. I am Self- motivated, Creative,
-                        Adaptable, and also known for having an eye for details,
-                        I am eager to be challenged in order to grow and further
-                        improve my IT skills.
+                        I am Zahra, a Software Engineering Student and a web
+                        developer. I am Self- motivated, Creative, Adaptable,
+                        and also known for having an eye for details, I am eager
+                        to be challenged in order to grow and further improve my
+                        IT skills.
                     </p>
                     <a href="#contact" className="btn btn-primary">
                         Let's Talk

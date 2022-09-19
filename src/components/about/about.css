@@ -3,7 +3,7 @@
   grid-template-columns: 35% 50%;
   gap: 15%;
 }
-.about__me {
+/* .about__me {
   width: 100%;
   aspect-ratio: 3/1.8;
   border-radius: 2rem;
@@ -21,11 +21,11 @@
   overflow: hidden;
   transform: rotate(10deg);
   transition: var(--transition);
-}
+} */
 
-.about__me-image:hover {
+/* .about__me-image:hover {
   transform: rotate(0);
-}
+} */
 .about__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -61,6 +61,7 @@
 .about__content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-light);
+  
 }
 /************* media queries medium *********************/
 
