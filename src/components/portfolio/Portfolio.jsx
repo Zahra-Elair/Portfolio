@@ -45,7 +45,7 @@ const Portfolio = () => {
             id: 5,
             img: allDrive,
             title: "All Drive",
-            desc: "A web application for managing diffrent cloud storages in one place , built with MERN stack",
+            desc: "A web application for managing different cloud storages in one place , built with MERN stack",
             github: "https://github.com/Zahra-Elair/All-Drive",
             demo: "https://zahra-elair.github.io/Portfolio/",
         },
