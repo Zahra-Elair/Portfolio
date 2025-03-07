@@ -1,13 +1,13 @@
 import { PersonalInfo } from './types';
 
 export const personalInfo: PersonalInfo = {
-  name: "John Anderson",
-  title: "Senior Blockchain Developer & Software Engineer",
+  name: "Zahra Elair",
+  title: "Web3 Developer & Software Engineer",
   contact: {
-    email: "john.anderson@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
-    linkedin: "https://linkedin.com/in/johnanderson"
+    email: "zahraelair17@gmail.com",
+    phone: "+216 50389034",
+    location: "Tunis, Tunisia",
+    linkedin: "https://www.linkedin.com/in/Zahra-Elair/"
   },
-  summary: "Seasoned software engineer with 5+ years of experience specializing in blockchain development and decentralized applications. Expert in smart contract development, DeFi protocols, and full-stack web development with a proven track record of delivering secure, scalable solutions for enterprise clients."
+  summary: "Full Stack Web Developer with expertise in React.js, Next.js, Node.js and modern UI/UX principles, seeking to leverage my skills in a challenging international environment. Open to relocation and visa sponsorship opportunities to contribute to innovative projects."
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code2, Database, Cpu } from 'lucide-react';
+import React from "react";
+import { Code2, Database, Cpu } from "lucide-react";
 
 export default function About() {
   return (
@@ -27,13 +27,15 @@ export default function About() {
         </div>
         <div className="mt-12 text-lg text-gray-600 dark:text-gray-300">
           <p className="mb-4">
-            With over 5 years of experience in software development, I specialize in building
-            decentralized applications and blockchain solutions. My expertise spans both traditional
-            web development and cutting-edge Web3 technologies.
+            With 1.5+ years of experience in software development, I specialize
+            in building decentralized applications and blockchain solutions. My
+            expertise spans both traditional web development and cutting-edge
+            Web3 technologies.
           </p>
           <p>
-            I'm passionate about creating secure, efficient, and user-friendly applications that
-            bridge the gap between conventional web services and blockchain technology.
+            I'm passionate about creating secure, efficient, and user-friendly
+            applications that bridge the gap between conventional web services
+            and blockchain technology.
           </p>
         </div>
       </div>
@@ -53,7 +55,9 @@ function FeatureCard({
   return (
     <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
       <div className="text-blue-600 dark:text-blue-400 mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        {title}
+      </h3>
       <p className="text-gray-600 dark:text-gray-300">{description}</p>
     </div>
   );

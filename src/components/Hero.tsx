@@ -1,9 +1,9 @@
-import React from 'react';
-import { Github, Linkedin, Twitter, ChevronDown } from 'lucide-react';
+import React from "react";
+import { Github, Linkedin, Twitter, ChevronDown } from "lucide-react";
 
 export default function Hero() {
   const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -13,12 +13,25 @@ export default function Hero() {
           Web3 Developer & Software Engineer
         </h1>
         <p className="text-xl text-gray-300 mb-8">
-          Building the future of decentralized applications with modern web technologies
+          Building the future of decentralized applications with modern web
+          technologies
         </p>
         <div className="flex justify-center space-x-6 mb-12">
-          <SocialLink href="https://github.com" icon={<Github />} label="GitHub" />
-          <SocialLink href="https://linkedin.com" icon={<Linkedin />} label="LinkedIn" />
-          <SocialLink href="https://twitter.com" icon={<Twitter />} label="Twitter" />
+          <SocialLink
+            href="https://github.com/Zahra-Elair"
+            icon={<Github />}
+            label="GitHub"
+          />
+          <SocialLink
+            href="https://www.linkedin.com/in/Zahra-Elair/"
+            icon={<Linkedin />}
+            label="LinkedIn"
+          />
+          <SocialLink
+            href="https://x.com/ZahraElair"
+            icon={<Twitter />}
+            label="Twitter"
+          />
         </div>
         <button
           onClick={scrollToAbout}
@@ -32,7 +45,15 @@ export default function Hero() {
   );
 }
 
-function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
+function SocialLink({
+  href,
+  icon,
+  label,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  label: string;
+}) {
   return (
     <a
       href={href}

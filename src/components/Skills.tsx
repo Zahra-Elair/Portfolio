@@ -1,10 +1,74 @@
-import React from 'react';
+import React from "react";
 
 const skills = [
-  { category: 'Blockchain', items: ['Solidity', 'Web3.js', 'Ethers.js', 'Hardhat', 'IPFS'] },
-  { category: 'Frontend', items: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Redux'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'GraphQL'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'CI/CD', 'Testing'] },
+  {
+    category: "Blockchain",
+    items: [
+      "Solidity",
+      "Web3.js",
+      "Ethers.js",
+      "Hardhat",
+      "IPFS",
+      "Solana",
+      "Ethereum",
+      "Bitcoin",
+      "Smart Contracts",
+      "Wallet Integration",
+      "Metamask",
+      "DeFi",
+      "Hedera",
+    ],
+  },
+  {
+    category: "Frontend",
+    items: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next.js",
+      "Redux",
+      "TanStack",
+      "Framer Motion",
+      "Three.js",
+      " Material UI",
+      "Shadcn",
+      "SEO",
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      "Node.js",
+      "Express",
+      "Python",
+      "FastAPI",
+      "RESTful APIs",
+      "JWT",
+      "WebSockets",
+      "Sequelize",
+      "Swagger",
+      "GraphQL",
+    ],
+  },
+  {
+    category: "AI / ML",
+    items: [
+      "Large Language Models (LLMs)",
+      "Retrieval-Augmented Generation (RAG)",
+      "Agentic AI",
+      "LangChain",
+      "LangGraph",
+    ],
+  },
+  {
+    category: "Database & State Management",
+    items: ["MongoDB", "MySQL", "PostgreSQL", "Firebase", "Redis"],
+  },
+  {
+    category: "Performance & Optimization",
+    items: ["SSR", "Lazy Loading", "Caching", "Progressive Web Apps (PWAs)"],
+  },
+  { category: "Tools", items: ["Git", "Docker", "Figma", "Postman", "Jest"] },
 ];
 
 export default function Skills() {
