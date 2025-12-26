@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useInView(options: IntersectionObserverOptions = {}) {
-  const ref = useRef<HTMLElement>(null);
+export function useInView<T extends Element = HTMLElement>(options: IntersectionObserverOptions = {}) {
+  const ref = useRef<T | null>(null);
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function useInView(options: IntersectionObserverOptions = {}) {
     });
 
     if (ref.current) {
-      observer.observe(ref.current);
+      observer.observe(ref.current as unknown as Element);
     }
 
     return () => observer.disconnect();

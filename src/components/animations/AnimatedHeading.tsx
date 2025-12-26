@@ -1,5 +1,5 @@
-import React from 'react';
-import AnimatedElement from './AnimatedElement';
+import React from "react";
+import AnimatedElement from "./AnimatedElement";
 
 interface AnimatedHeadingProps {
   level: 1 | 2 | 3;
@@ -15,15 +15,21 @@ export default function AnimatedHeading({
   delay,
 }: AnimatedHeadingProps) {
   const baseStyles = {
-    1: 'text-4xl font-bold',
-    2: 'text-3xl font-semibold',
-    3: 'text-2xl font-medium',
+    1: "text-4xl font-bold text-gray-900 dark:text-white",
+    2: "text-3xl font-semibold text-gray-900 dark:text-white",
+    3: "text-2xl font-medium text-gray-900 dark:text-white",
   };
+  const headingTags = {
+    1: "h1",
+    2: "h2",
+    3: "h3",
+  } as const;
+  const asTag = headingTags[level];
 
   return (
     <AnimatedElement
-      as={`h${level}` as keyof JSX.IntrinsicElements}
-      className={`${baseStyles[level]} ${className || ''}`}
+      as={asTag}
+      className={`${baseStyles[level]} ${className || ""}`}
       delay={delay}
       animation="scale-up"
     >
