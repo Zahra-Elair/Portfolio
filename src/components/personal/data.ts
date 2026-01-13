@@ -1,5 +1,18 @@
 import { PersonalInfo, Project } from './types';
 
+// Import project images
+import arbitrageTradeBotImg from '../../assets/projects/arbitrage trade bot.png';
+import doraComplianceImg from '../../assets/projects/DORA AI Compliance System.png';
+import aiTradingBotImg from '../../assets/projects/AI-Powered Predictive Trading Bot.png';
+import decentralizedIdentityImg from '../../assets/projects/Decentralized Identity Platform.png';
+import tunispeakImg from '../../assets/projects/Tunispeak.png';
+import foodChainTrackerImg from '../../assets/projects/food supply chain tracker.png';
+import sqlAgentImg from '../../assets/projects/sql agent.png';
+import frenchTeachingImg from '../../assets/projects/french teaching platform.png';
+import decentralizedSocialMediaImg from '../../assets/projects/Decentralized Social Media Platform.png';
+import zkSupplyChainImg from '../../assets/projects/Zero-Knowledge Supply Chain Tracker.png';
+import postQuantumMedicalImg from '../../assets/projects/Post-Quantum Secure Medical Platform.png';
+
 export const personalInfo: PersonalInfo = {
   name: "Zahra Elair",
   title: "Web3 Developer & Software Engineer",
@@ -79,7 +92,7 @@ export const projects: Project[] = [
   {
     title: 'Arbitrage Trade Bot',
     description: 'An Ethereum-based trading bot that leverages flash loans to identify and execute arbitrage opportunities across decentralized exchanges within a single transaction.',
-    image: '/src/assets/projects/arbitrage trade bot.png',
+    image: arbitrageTradeBotImg,
     tech: ['Solidity', 'React', 'Web3.js', 'Hardhat', 'Ethers.js'],
     demo: 'https://example.com/arbitrage-bot-demo',
     github: 'https://github.com/zahraelair/arbitrage-trade-bot',
@@ -89,7 +102,7 @@ export const projects: Project[] = [
   {
     title: 'DORA AI Compliance System',
     description: 'An AI-powered platform ensuring compliance with the European Union\'s Digital Operational Resilience Act (DORA), detecting non-compliance in ROI and Incident Management using a Neo4j knowledge graph and AI agents.',
-    image: '/src/assets/projects/DORA AI Compliance System.png',
+    image: doraComplianceImg,
     tech: ['Python', 'AI Agents', 'LangChain', 'Neo4j', 'React', 'Node.js', 'Graph Databases'],
     demo: 'https://dora-compliance.example.com',
     github: 'https://github.com/zahraelair/dora-ai-compliance',
@@ -99,7 +112,7 @@ export const projects: Project[] = [
   {
     title: 'AI-Powered Predictive Trading Bot (Solana)',
     description: 'A high-frequency trading bot integrating AI-driven price prediction and liquidity pool yield analysis to optimize real-time trades.',
-    image: '/src/assets/projects/AI-Powered Predictive Trading Bot.png',
+    image: aiTradingBotImg,
     tech: ['Solana', 'Anchor', 'Rust', 'Python', 'TensorFlow', 'PyTorch', 'LSTM', 'Reinforcement Learning'],
     demo: '',
     github: '',
@@ -109,7 +122,7 @@ export const projects: Project[] = [
   {
     title: 'Quantum-Secure Decentralized Identity Platform',
     description: 'A self-sovereign identity platform on Ethereum using post-quantum cryptography and AI verification, integrated with smart contracts for secure user identity management.',
-    image: '/src/assets/projects/Decentralized Identity Platform.png',
+    image: decentralizedIdentityImg,
     tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Post-Quantum Libraries (CRYSTALS-Kyber, Dilithium)', 'Python', 'TensorFlow', 'PyTorch', 'AI Classification Models'],
     demo: '',
     github: '',
@@ -119,7 +132,7 @@ export const projects: Project[] = [
   {
     title: 'Tunispeak',
     description: 'An open-source NLP project translating between English and Tunisian Arabic using transformers, with a web interface for corrections and dataset enrichment.',
-    image: '/src/assets/projects/Tunispeak.png',
+    image: tunispeakImg,
     tech: ['Python', 'Transformers', 'React', 'Next.js', 'Hugging Face'],
     demo: 'https://tunispeak.example.com',
     github: 'https://github.com/zahraelair/tunispeak',
@@ -129,7 +142,7 @@ export const projects: Project[] = [
   {
     title: 'Tunisian Food Supply Chain Tracker',
     description: 'A mobile-focused platform allowing users to scan products and trace their full production chain, highlighting authenticity and certifications.',
-    image: '/src/assets/projects/food supply chain tracker.png',
+    image: foodChainTrackerImg,
     tech: ['React Native', 'React', 'Node.js', 'Supabase'],
     demo: 'https://foodchain.example.com',
     github: 'https://github.com/zahraelair/food-chain-tracker',
@@ -139,7 +152,7 @@ export const projects: Project[] = [
   {
     title: 'SQL Agent',
     description: 'An AI-powered agent interacting with SQL databases to fetch, update, and manage data intelligently.',
-    image: '/src/assets/projects/sql agent.png',
+    image: sqlAgentImg,
     tech: ['Python', 'Node.js', 'SQL', 'AI Agents', 'Automation'],
     demo: 'https://sql-agent.example.com',
     github: 'https://github.com/zahraelair/sql-agent',
@@ -149,7 +162,7 @@ export const projects: Project[] = [
   {
     title: 'French Teaching Platform (Freelance)',
     description: 'A digital platform for online learning. Freelance contribution focused on implementing international payments with Stripe, user authentication, and database integration.',
-    image: '/src/assets/projects/french teaching platform.png',
+    image: frenchTeachingImg,
     tech: ['React', 'Next.js', 'Stripe', 'Supabase', 'Clerk', 'Node.js'],
     demo: '',
     github: '',
@@ -159,7 +172,7 @@ export const projects: Project[] = [
   {
     title: 'AI-Powered Decentralized Social Media Platform',
     description: 'A censorship-resistant decentralized social media platform on Ethereum, with AI-driven content moderation and DAO-based governance.',
-    image: '/src/assets/projects/Decentralized Social Media Platform.png',
+    image: decentralizedSocialMediaImg,
     tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Chainlink', 'Python', 'NLP', 'Reinforcement Learning'],
     demo: '',
     github: '',
@@ -169,7 +182,7 @@ export const projects: Project[] = [
   {
     title: 'Zero-Knowledge Supply Chain Tracker',
     description: 'A privacy-preserving supply chain tracker using zk-SNARKs with optional AI for anomaly detection.',
-    image: '/src/assets/projects/Zero-Knowledge Supply Chain Tracker.png',
+    image: zkSupplyChainImg,
     tech: ['Aleo', 'Leo', 'Aleo SDK', 'IPFS', 'Python'],
     demo: '',
     github: '',
@@ -179,7 +192,7 @@ export const projects: Project[] = [
   {
     title: 'Post-Quantum Secure Medical Platform',
     description: 'A secure medical platform implementing end-to-end encryption and post-quantum cryptography to protect sensitive patient data against current and future threats.',
-    image: '/src/assets/projects/Post-Quantum Secure Medical Platform.png',
+    image: postQuantumMedicalImg,
     tech: ['Python', 'Node.js', 'React', 'CRYSTALS-Kyber', 'CRYSTALS-Dilithium', 'End-to-End Encryption'],
     demo: '',
     github: '',
