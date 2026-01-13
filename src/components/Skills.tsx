@@ -168,11 +168,11 @@ export default function Skills() {
         </AnimatedHeading>
 
         {/* Filter tabs */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 overflow-x-auto px-4 -mx-4 sm:mx-0 sm:px-0">
           <div
             role="tablist"
             aria-label="Skill categories"
-            className="inline-flex rounded-lg bg-white/50 dark:bg-gray-700/50 p-1"
+            className="inline-flex flex-wrap justify-center gap-2 rounded-lg bg-white/50 dark:bg-gray-700/50 p-2"
           >
             {categories.map((cat) => (
               <button
@@ -181,7 +181,7 @@ export default function Skills() {
                 aria-selected={activeCategory === cat}
                 tabIndex={activeCategory === cat ? 0 : -1}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-offset-gray-800 ${
+                className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-offset-gray-800 whitespace-nowrap ${
                   activeCategory === cat
                     ? "bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow"
                     : "text-gray-600 dark:text-gray-300 hover:bg-white/30 dark:hover:bg-white/5"
@@ -193,7 +193,7 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {filteredGroups.map((skillGroup, groupIndex) => {
             const cardDelay = animate ? groupIndex * 100 : 0; // match Experience stagger
             return animate ? (
