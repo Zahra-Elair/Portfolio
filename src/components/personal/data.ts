@@ -1,4 +1,4 @@
-import { PersonalInfo } from './types';
+import { PersonalInfo, Project } from './types';
 
 export const personalInfo: PersonalInfo = {
   name: "Zahra Elair",
@@ -73,5 +73,118 @@ export const experiences = [
       "Enhanced system performance by optimizing database queries and backend logic for faster processing.",
     ],
   },
+];
+
+export const projects: Project[] = [
+  {
+    title: 'Arbitrage Trade Bot',
+    description: 'An Ethereum-based trading bot that leverages flash loans to identify and execute arbitrage opportunities across decentralized exchanges within a single transaction.',
+    image: '/src/assets/projects/arbitrage trade bot.png',
+    tech: ['Solidity', 'React', 'Web3.js', 'Hardhat', 'Ethers.js'],
+    demo: 'https://example.com/arbitrage-bot-demo',
+    github: 'https://github.com/zahraelair/arbitrage-trade-bot',
+    metrics: 'Executed 200+ profitable trades, 5% average ROI per trade',
+    domains: ['Dev', 'Blockchain']
+  },
+  {
+    title: 'DORA AI Compliance System',
+    description: 'An AI-powered platform ensuring compliance with the European Union\'s Digital Operational Resilience Act (DORA), detecting non-compliance in ROI and Incident Management using a Neo4j knowledge graph and AI agents.',
+    image: '/src/assets/projects/DORA AI Compliance System.png',
+    tech: ['Python', 'AI Agents', 'LangChain', 'Neo4j', 'React', 'Node.js', 'Graph Databases'],
+    demo: 'https://dora-compliance.example.com',
+    github: 'https://github.com/zahraelair/dora-ai-compliance',
+    metrics: 'In Progress',
+    domains: ['AI', 'Dev']
+  },
+  {
+    title: 'AI-Powered Predictive Trading Bot (Solana)',
+    description: 'A high-frequency trading bot integrating AI-driven price prediction and liquidity pool yield analysis to optimize real-time trades.',
+    image: '/src/assets/projects/AI-Powered Predictive Trading Bot.png',
+    tech: ['Solana', 'Anchor', 'Rust', 'Python', 'TensorFlow', 'PyTorch', 'LSTM', 'Reinforcement Learning'],
+    demo: '',
+    github: '',
+    metrics: 'In Progress',
+    domains: ['Blockchain', 'AI', 'Dev']
+  },
+  {
+    title: 'Quantum-Secure Decentralized Identity Platform',
+    description: 'A self-sovereign identity platform on Ethereum using post-quantum cryptography and AI verification, integrated with smart contracts for secure user identity management.',
+    image: '/src/assets/projects/Decentralized Identity Platform.png',
+    tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Post-Quantum Libraries (CRYSTALS-Kyber, Dilithium)', 'Python', 'TensorFlow', 'PyTorch', 'AI Classification Models'],
+    demo: '',
+    github: '',
+    metrics: 'In Progress',
+    domains: ['Blockchain', 'AI', 'Dev', 'PQC']
+  },
+  {
+    title: 'Tunispeak',
+    description: 'An open-source NLP project translating between English and Tunisian Arabic using transformers, with a web interface for corrections and dataset enrichment.',
+    image: '/src/assets/projects/Tunispeak.png',
+    tech: ['Python', 'Transformers', 'React', 'Next.js', 'Hugging Face'],
+    demo: 'https://tunispeak.example.com',
+    github: 'https://github.com/zahraelair/tunispeak',
+    metrics: 'Dataset of 50k+ entries, improved translation accuracy over GPT models by 35%',
+    domains: ['AI', 'Dev']
+  },
+  {
+    title: 'Tunisian Food Supply Chain Tracker',
+    description: 'A mobile-focused platform allowing users to scan products and trace their full production chain, highlighting authenticity and certifications.',
+    image: '/src/assets/projects/food supply chain tracker.png',
+    tech: ['React Native', 'React', 'Node.js', 'Supabase'],
+    demo: 'https://foodchain.example.com',
+    github: 'https://github.com/zahraelair/food-chain-tracker',
+    metrics: 'Tracked 100+ products from farm to store, 80% user engagement rate',
+    domains: ['Dev', 'Blockchain']
+  },
+  {
+    title: 'SQL Agent',
+    description: 'An AI-powered agent interacting with SQL databases to fetch, update, and manage data intelligently.',
+    image: '/src/assets/projects/sql agent.png',
+    tech: ['Python', 'Node.js', 'SQL', 'AI Agents', 'Automation'],
+    demo: 'https://sql-agent.example.com',
+    github: 'https://github.com/zahraelair/sql-agent',
+    metrics: 'Automated 1000+ queries, reduced manual database operations by 60%',
+    domains: ['AI', 'Dev']
+  },
+  {
+    title: 'French Teaching Platform (Freelance)',
+    description: 'A digital platform for online learning. Freelance contribution focused on implementing international payments with Stripe, user authentication, and database integration.',
+    image: '/src/assets/projects/french teaching platform.png',
+    tech: ['React', 'Next.js', 'Stripe', 'Supabase', 'Clerk', 'Node.js'],
+    demo: '',
+    github: '',
+    metrics: 'Implemented secure international payment and authentication flow for users',
+    domains: ['Dev']
+  },
+  {
+    title: 'AI-Powered Decentralized Social Media Platform',
+    description: 'A censorship-resistant decentralized social media platform on Ethereum, with AI-driven content moderation and DAO-based governance.',
+    image: '/src/assets/projects/Decentralized Social Media Platform.png',
+    tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Chainlink', 'Python', 'NLP', 'Reinforcement Learning'],
+    demo: '',
+    github: '',
+    metrics: 'In Progress',
+    domains: ['Blockchain', 'AI', 'Dev']
+  },
+  {
+    title: 'Zero-Knowledge Supply Chain Tracker',
+    description: 'A privacy-preserving supply chain tracker using zk-SNARKs with optional AI for anomaly detection.',
+    image: '/src/assets/projects/Zero-Knowledge Supply Chain Tracker.png',
+    tech: ['Aleo', 'Leo', 'Aleo SDK', 'IPFS', 'Python'],
+    demo: '',
+    github: '',
+    metrics: 'In Progress',
+    domains: ['Blockchain', 'AI', 'Dev']
+  },
+  {
+    title: 'Post-Quantum Secure Medical Platform',
+    description: 'A secure medical platform implementing end-to-end encryption and post-quantum cryptography to protect sensitive patient data against current and future threats.',
+    image: '/src/assets/projects/Post-Quantum Secure Medical Platform.png',
+    tech: ['Python', 'Node.js', 'React', 'CRYSTALS-Kyber', 'CRYSTALS-Dilithium', 'End-to-End Encryption'],
+    demo: '',
+    github: '',
+    metrics: 'Enabled secure handling of sensitive medical records with post-quantum encryption',
+    domains: ['Dev', 'PQC']
+  }
 ];
 
