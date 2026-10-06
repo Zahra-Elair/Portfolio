@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 250 249 246;
+    --surface: 255 255 255;
+    --ink: 28 25 23;
+    --muted: 107 101 96;
+    --line: 231 227 220;
+    --accent: 194 65 12;
+    --accent-fg: 255 255 255;
+  }
+
+  .dark {
+    --bg: 15 14 13;
+    --surface: 26 25 23;
+    --ink: 245 243 239;
+    --muted: 168 162 158;
+    --line: 44 42 39;
+    --accent: 251 146 60;
+    --accent-fg: 28 25 23;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased transition-colors duration-200;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

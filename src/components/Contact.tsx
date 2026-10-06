@@ -1,68 +1,66 @@
-import React from "react";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { personalInfo } from "./personal/data";
 
 export default function Contact() {
-  return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-          Get In Touch
-        </h2>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
-          I'm always open to discussing new projects and opportunities.
-        </p>
-        <div className="flex justify-center space-x-8 mb-12">
-          <SocialLink
-            href="mailto:zahraelair17@gmail.com"
-            icon={<Mail />}
-            label="Email"
-            text="Email"
-          />
-          <SocialLink
-            href="https://github.com/Zahra-Elair"
-            icon={<Github />}
-            label="GitHub"
-            text="GitHub"
-          />
-          <SocialLink
-            href="https://www.linkedin.com/in/Zahra-Elair/"
-            icon={<Linkedin />}
-            label="LinkedIn"
-            text="LinkedIn"
-          />
-          <SocialLink
-            href="https://x.com/ZahraElair"
-            icon={<Twitter />}
-            label="Twitter"
-            text="Twitter"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
+  const { contact } = personalInfo;
 
-function SocialLink({
-  href,
-  icon,
-  label,
-  text,
-}: {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-  text: string;
-}) {
+  const links = [
+    { href: contact.linkedin, icon: <Linkedin />, label: "LinkedIn" },
+    { href: contact.github, icon: <Github />, label: "GitHub" },
+  ];
+
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-      aria-label={label}
-    >
-      <span className="mb-2">{icon}</span>
-      <span className="text-sm">{text}</span>
-    </a>
+    <footer id="contact" className="border-t border-line">
+      <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-28">
+        <p className="mb-4 font-mono text-sm text-accent">05</p>
+        <h2 className="max-w-2xl font-display text-4xl font-bold tracking-tight sm:text-6xl">
+          Let's build something together.
+        </h2>
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+          {personalInfo.availability.long} The fastest way to reach me is
+          email or WhatsApp.
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <a
+            href={`mailto:${contact.email}`}
+            className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-medium text-accent-fg transition-opacity hover:opacity-90"
+          >
+            <Mail className="h-4 w-4" />
+            {contact.email}
+          </a>
+          <a
+            href={`https://wa.me/${contact.phone.replace(/\D/g, "")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`WhatsApp ${contact.phone}`}
+            className="inline-flex items-center gap-2 rounded-md border border-line bg-surface px-5 py-3 text-sm font-medium transition-colors hover:border-ink"
+          >
+            <MessageCircle className="h-4 w-4" />
+            WhatsApp {contact.phone}
+          </a>
+        </div>
+
+        <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+          {links.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink [&>svg]:h-4 [&>svg]:w-4"
+              >
+                {link.icon}
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-20 border-t border-line pt-6 font-mono text-xs text-muted">
+          © {new Date().getFullYear()} {personalInfo.name} · {contact.location}
+        </p>
+      </div>
+    </footer>
   );
 }

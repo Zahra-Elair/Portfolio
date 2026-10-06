@@ -1,121 +1,142 @@
-import React, { useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import Section from "./Section";
+import ProjectLinks from "./ProjectLinks";
+import AnimatedElement from "./animations/AnimatedElement";
 import { projects } from "./personal/data";
 import type { Project } from "./personal/types";
 
-const ProjectCard = ({ project }: { project: Project }) => (
-  <div
-    key={project.title}
-    className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-  >
+function TechList({ tech }: { tech: string[] }) {
+  return (
+    <ul className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-muted">
+      {tech.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+function FeaturedProject({
+  project,
+  flip,
+}: {
+  project: Project;
+  flip: boolean;
+}) {
+  const detailsPath = project.slug ? `/projects/${project.slug}` : null;
+
+  const image = (
     <img
       src={project.image}
-      alt={project.title}
-      className="w-full h-48 object-cover"
+      alt={`${project.title} preview`}
+      loading="lazy"
+      className="aspect-[16/10] w-full object-cover"
     />
-    <div className="p-6">
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        {project.title}
-      </h3>
-      <p className="text-gray-600 dark:text-gray-300 mb-4">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.tech.map((tech) => (
-          <span
-            key={tech}
-            className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-      <p className="text-green-600 dark:text-green-400 font-medium mb-4">
-        {project.metrics}
-      </p>
-      <div className="flex space-x-4">
-        <a
-          href={project.demo}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <ExternalLink className="w-4 h-4 mr-1" />
-          Demo
-        </a>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          <Github className="w-4 h-4 mr-1" />
-          Code
-        </a>
-      </div>
-    </div>
-  </div>
-);
-
-export default function Projects() {
-  const [selectedDomain, setSelectedDomain] = useState<string>("All");
-
-  // Get all unique domains
-  const allDomains = Array.from(
-    new Set(projects.flatMap((project) => project.domains))
-  ).sort();
-
-  const filteredProjects =
-    selectedDomain === "All"
-      ? projects
-      : projects.filter((project) => project.domains.includes(selectedDomain));
+  );
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
-          Projects
-        </h2>
-
-        {/* Filter Buttons */}
-        <div className="flex justify-center flex-wrap gap-3 mb-12">
-          <button
-            onClick={() => setSelectedDomain("All")}
-            className={`px-6 py-2 rounded-full font-medium transition-colors ${
-              selectedDomain === "All"
-                ? "bg-blue-600 text-white dark:bg-blue-500"
-                : "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
-            }`}
-          >
-            All {/*  ({projects.length}) */}
-          </button>
-          {allDomains.map((domain) => {
-            const count = projects.filter((p) =>
-              p.domains.includes(domain)
-            ).length;
-            return (
-              <button
-                key={domain}
-                onClick={() => setSelectedDomain(domain)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                  selectedDomain === domain
-                    ? "bg-blue-600 text-white dark:bg-blue-500"
-                    : "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
-                }`}
-              >
-                {domain} ({count})
-              </button>
-            );
-          })}
+    <AnimatedElement
+      as="article"
+      className="grid items-center gap-6 md:grid-cols-2 md:gap-12"
+    >
+      <div
+        className={`overflow-hidden rounded-xl border border-line bg-surface ${
+          flip ? "md:order-2" : ""
+        }`}
+      >
+        {detailsPath ? (
+          <Link to={detailsPath} tabIndex={-1} aria-hidden="true">
+            {image}
+          </Link>
+        ) : (
+          image
+        )}
+      </div>
+      <div>
+        <p className="mb-3 font-mono text-xs text-accent">{project.metrics}</p>
+        <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+          {detailsPath ? (
+            <Link
+              to={detailsPath}
+              className="transition-colors hover:text-accent"
+            >
+              {project.title}
+            </Link>
+          ) : (
+            project.title
+          )}
+        </h3>
+        <p className="mt-4 leading-relaxed text-muted">{project.description}</p>
+        <div className="mt-5">
+          <TechList tech={project.tech} />
         </div>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+          <ProjectLinks project={project} />
+          {detailsPath && (
+            <Link
+              to={detailsPath}
+              aria-label={`Read the ${project.title} case study`}
+              className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+            >
+              Read case study
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          )}
         </div>
       </div>
-    </section>
+    </AnimatedElement>
+  );
+}
+
+function ProjectRow({ project }: { project: Project }) {
+  const inProgress = project.metrics === "In Progress";
+
+  return (
+    <li className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-5">
+      <div className="flex items-start justify-between gap-3">
+        <h4 className="font-display text-lg font-semibold leading-snug tracking-tight">
+          {project.title}
+        </h4>
+        {inProgress && (
+          <span className="shrink-0 rounded-full border border-line px-2 py-0.5 font-mono text-[11px] text-muted">
+            In progress
+          </span>
+        )}
+      </div>
+      <p className="text-sm leading-relaxed text-muted">
+        {project.description}
+      </p>
+      <div className="mt-auto pt-1">
+        <TechList tech={project.tech} />
+      </div>
+    </li>
+  );
+}
+
+export default function Projects() {
+  const featured = projects.filter((project) => project.featured);
+  const others = projects.filter((project) => !project.featured);
+
+  return (
+    <Section id="projects" index="01" title="Projects">
+      <div className="space-y-16 sm:space-y-24">
+        {featured.map((project, i) => (
+          <FeaturedProject
+            key={project.title}
+            project={project}
+            flip={i % 2 === 1}
+          />
+        ))}
+      </div>
+
+      <h3 className="mb-6 mt-20 font-mono text-sm text-muted sm:mt-28">
+        More projects
+      </h3>
+      <ul className="grid gap-4 sm:grid-cols-2">
+        {others.map((project) => (
+          <ProjectRow key={project.title} project={project} />
+        ))}
+      </ul>
+    </Section>
   );
 }

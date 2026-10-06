@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
 
 export function useTheme() {
+  // index.html sets the initial class before first paint
   const [theme, setTheme] = useState<'light' | 'dark'>(
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
   );
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
+    document.documentElement.classList.toggle('dark', theme === 'dark');
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    const next = theme === 'light' ? 'dark' : 'light';
+    try {
+      localStorage.setItem('theme', next);
+    } catch {
+      // storage unavailable; theme still applies for this visit
+    }
+    setTheme(next);
   };
 
   return { theme, toggleTheme };
