@@ -31,6 +31,7 @@ export interface Project {
   tech: string[];
   demo: string;
   video?: string;
+  writeups?: { label: string; href: string }[];
   github: string;
   metrics: string;
   domains: string[];

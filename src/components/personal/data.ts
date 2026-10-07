@@ -248,6 +248,9 @@ export const projects: Project[] = [
   },
   {
     title: 'AI-Powered Decentralized Social Media Platform',
+    writeups: [
+      { label: "Intern's write-up on LinkedIn", href: 'https://www.linkedin.com/posts/mohamed-aziz-dridi-a954a52a7_rapportpfedridimohamedaziz-ugcPost-7480227939633172480-dAjG/' },
+    ],
     description: 'A censorship-resistant decentralized social media platform on Ethereum, with AI-driven content moderation and DAO-based governance.',
     image: decentralizedSocialMediaImg,
     tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Chainlink', 'Python', 'NLP', 'Reinforcement Learning'],
@@ -258,6 +261,10 @@ export const projects: Project[] = [
   },
   {
     title: 'Quantum-Secure Decentralized Identity Platform',
+    writeups: [
+      { label: "Intern's project post and demo", href: 'https://www.linkedin.com/posts/mestaysserasma_postquantumcryptography-decentralization-ugcPost-7480648253626200065-FF71/' },
+      { label: "Intern's thank-you post", href: 'https://www.linkedin.com/posts/mestaysserasma_%F0%9D%90%85%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9A%F0%9D%90%A5%F0%9D%90%A5%F0%9D%90%B2-%F0%9D%90%84%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%9E%F0%9D%90%9E%F0%9D%90%AB-alhamdulillah-share-7478860415481987073-U67O/' },
+    ],
     description: 'A self-sovereign identity platform on Ethereum using post-quantum cryptography and AI verification, integrated with smart contracts for secure user identity management.',
     image: decentralizedIdentityImg,
     tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Post-Quantum Libraries (CRYSTALS-Kyber, Dilithium)', 'Python', 'TensorFlow', 'PyTorch', 'AI Classification Models'],
@@ -278,6 +285,9 @@ export const projects: Project[] = [
   },
   {
     title: 'Post-Quantum Secure Medical Platform',
+    writeups: [
+      { label: "Intern's graduation post", href: 'https://www.linkedin.com/posts/aziza-ben-romdhane-139927239_mastersdegree-cybersecurity-innovation-ugcPost-7345494617674465280-SvVo/' },
+    ],
     description: 'A secure medical platform implementing end-to-end encryption and post-quantum cryptography to protect sensitive patient data against current and future threats.',
     image: postQuantumMedicalImg,
     tech: ['Python', 'Node.js', 'React', 'CRYSTALS-Kyber', 'CRYSTALS-Dilithium', 'End-to-End Encryption'],

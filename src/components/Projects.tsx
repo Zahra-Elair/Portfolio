@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Section from "./Section";
 import ProjectLinks from "./ProjectLinks";
@@ -89,6 +90,23 @@ function ProjectRow({ project }: { project: Project }) {
       <div className="mt-auto pt-1">
         <TechList tech={project.tech} />
       </div>
+      {project.writeups && (
+        <ul className="flex flex-wrap gap-x-5 gap-y-1">
+          {project.writeups.map((writeup) => (
+            <li key={writeup.href}>
+              <a
+                href={writeup.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+              >
+                {writeup.label}
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
   );
 }
@@ -112,9 +130,9 @@ export default function Projects() {
       <h3 className="mt-20 font-mono text-sm text-muted sm:mt-28">
         Projects I designed and mentored
       </h3>
-      <p className="mb-6 mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+      <p className="mb-6 mt-2 text-sm leading-relaxed text-muted">
         Blockchain and security projects I proposed, designed and supervised,
-        built by interns I mentored.
+        built by interns I&nbsp;mentored&nbsp;at&nbsp;Talan.
       </p>
       <ul className="grid gap-4 sm:grid-cols-2">
         {others.map((project) => (
