@@ -41,7 +41,7 @@ export default function ProjectPage() {
           {details.overview}
         </p>
         <div className="mt-8">
-          <ProjectLinks project={project} />
+          <ProjectLinks project={project} onProjectPage />
         </div>
       </header>
 

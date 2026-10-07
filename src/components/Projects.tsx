@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Section from "./Section";
 import ProjectLinks from "./ProjectLinks";
@@ -70,18 +69,8 @@ function FeaturedProject({
         <div className="mt-5">
           <TechList tech={project.tech} />
         </div>
-        <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+        <div className="mt-6">
           <ProjectLinks project={project} />
-          {detailsPath && (
-            <Link
-              to={detailsPath}
-              aria-label={`Read the ${project.title} case study`}
-              className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
-            >
-              Read case study
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          )}
         </div>
       </div>
     </AnimatedElement>
