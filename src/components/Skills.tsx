@@ -14,7 +14,7 @@ const skills = [
     ],
   },
   {
-    category: "Languages",
+    category: "Programming",
     items: ["Python", "TypeScript", "JavaScript", "SQL", "Java"],
   },
   {
@@ -28,12 +28,17 @@ const skills = [
     ],
   },
   {
-    category: "Backend",
-    items: ["FastAPI", "Node.js", "REST APIs", "Supabase Edge Functions"],
-  },
-  {
-    category: "Databases",
-    items: ["Neo4j", "PostgreSQL", "MongoDB", "MySQL", "Supabase"],
+    category: "Backend & Data",
+    items: [
+      "FastAPI",
+      "Node.js",
+      "REST APIs",
+      "Supabase",
+      "Neo4j",
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+    ],
   },
   {
     category: "Infrastructure",
