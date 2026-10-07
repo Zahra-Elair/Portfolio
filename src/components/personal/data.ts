@@ -1,16 +1,11 @@
 import { PersonalInfo, Project } from './types';
 
 // Import project images
-import arbitrageTradeBotImg from '../../assets/projects/arbitrage trade bot.png';
 import doraComplianceImg from '../../assets/projects/DORA Platform.jpg';
-import aiTradingBotImg from '../../assets/projects/AI-Powered Predictive Trading Bot.png';
 import decentralizedIdentityImg from '../../assets/projects/Decentralized Identity Platform.png';
 import tunispeakImg from '../../assets/projects/Tunispeak.png';
 import foodChainTrackerImg from '../../assets/projects/food supply chain tracker.png';
-import sqlAgentImg from '../../assets/projects/sql agent.png';
-import frenchTeachingImg from '../../assets/projects/french teaching platform.png';
 import decentralizedSocialMediaImg from '../../assets/projects/Decentralized Social Media Platform.png';
-import zkSupplyChainImg from '../../assets/projects/Zero-Knowledge Supply Chain Tracker.png';
 import postQuantumMedicalImg from '../../assets/projects/Post-Quantum Secure Medical Platform.png';
 import cadenceImg from '../../assets/projects/Cadence.jpg';
 
@@ -38,13 +33,10 @@ export const experiences = [
     company: "Talan · Tunis, Tunisia",
     period: "September 2024 - Present",
     description: [
-      "Designed and developed end-to-end AI-powered applications, combining TypeScript, React, Next.js, Python, FastAPI, Node.js, databases, and AI services.",
       "Led the technical design and product development of an AI-powered DORA compliance platform, translating regulatory and business requirements into automated compliance workflows.",
       "Built AI workflows combining LLMs, RAG, Graph-RAG, embeddings, knowledge graphs, and AI agents for regulatory document analysis, intelligent search, risk analysis, and data querying.",
+      "Developed an AI-powered SQL agent with Python and Node.js that interacts with SQL databases to fetch, update, and manage data.",
       "Designed knowledge structures in Neo4j to connect regulatory requirements, compliance data, risks, entities, and relationships for graph-based retrieval and reasoning.",
-      "Developed user-facing AI features with React/Next.js and backend services with FastAPI, Node.js, and REST APIs, connecting AI capabilities to production-oriented application workflows.",
-      "Collaborated with stakeholders and end users to transform complex requirements into intuitive product features, balancing AI capabilities, usability, and business value.",
-      "Containerized and deployed applications using Docker and Vercel and contributed to internal AI and software engineering initiatives.",
       "Mentored 20+ interns across AI, software engineering, web development, and emerging technology projects.",
     ],
   },
@@ -53,7 +45,7 @@ export const experiences = [
     company: "Bridge Training (French Startup) · Remote",
     period: "June 2025 - September 2025",
     description: [
-      "Built and deployed a SaaS billing system using React, Supabase, and Stripe, covering subscriptions, trials, checkout, and payment lifecycle management.",
+      "Built and deployed a SaaS billing system for a French online training startup using React, Supabase, and Stripe, covering subscriptions, trials, checkout, and payment lifecycle management.",
       "Developed secure Supabase Edge Functions for Stripe Checkout session creation and webhook processing.",
       "Designed responsive billing dashboards and synchronized subscription, customer, and payment data across frontend and backend services.",
     ],
@@ -63,9 +55,10 @@ export const experiences = [
     company: "Talan · Tunis, Tunisia",
     period: "February 2024 - June 2024",
     description: [
-      "Built an AI-powered trading application using React.js/Next.js and AI agents for automated decision-making.",
-      "Developed REST APIs aggregating market data from multiple sources and optimized response times by 30%.",
-      "Integrated blockchain smart contracts through Web3.js within a full-stack application.",
+      "Built an AI-powered arbitrage trading bot on Ethereum, using AI agents and market data pipelines to identify arbitrage opportunities across decentralized exchanges and automate trading decisions.",
+      "Developed the bot's smart contracts with Solidity and Hardhat, using flash loans to execute each arbitrage within a single transaction.",
+      "Built REST APIs aggregating market data from multiple sources, cutting response times by 30%.",
+      "Connected the React.js/Next.js frontend to the smart contracts through Web3.js and Ethers.js.",
     ],
   },
   {
@@ -254,34 +247,14 @@ export const projects: Project[] = [
     domains: ['AI', 'Dev']
   },
   {
-    title: 'AI Predictive Trading Bot',
-    description: 'An AI-powered trading system combining AI agents, market data pipelines, and blockchain infrastructure for automated trading decisions.',
-    image: aiTradingBotImg,
-    tech: ['AI Agents', 'React', 'Next.js', 'REST APIs', 'Web3.js'],
+    title: 'AI-Powered Decentralized Social Media Platform',
+    description: 'A censorship-resistant decentralized social media platform on Ethereum, with AI-driven content moderation and DAO-based governance.',
+    image: decentralizedSocialMediaImg,
+    tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Chainlink', 'Python', 'NLP', 'Reinforcement Learning'],
     demo: '',
     github: '',
-    metrics: '2024 · Automated trading decisions driven by AI agents',
+    metrics: '',
     domains: ['Blockchain', 'AI', 'Dev']
-  },
-  {
-    title: 'Bridge Training - SaaS Billing System (Freelance)',
-    description: 'A SaaS billing system for a French training startup, covering subscriptions, trials, checkout, and payment lifecycle management, with Supabase Edge Functions handling Stripe Checkout sessions and webhooks.',
-    image: frenchTeachingImg,
-    tech: ['React', 'Supabase', 'Supabase Edge Functions', 'Stripe'],
-    demo: '',
-    github: '',
-    metrics: '2025 · Subscription, customer, and payment data synced across frontend and backend',
-    domains: ['Dev']
-  },
-  {
-    title: 'Arbitrage Trade Bot',
-    description: 'An Ethereum-based trading bot that leverages flash loans to identify and execute arbitrage opportunities across decentralized exchanges within a single transaction.',
-    image: arbitrageTradeBotImg,
-    tech: ['Solidity', 'React', 'Web3.js', 'Hardhat', 'Ethers.js'],
-    demo: '',
-    github: '',
-    metrics: 'Executed 200+ profitable trades, 5% average ROI per trade',
-    domains: ['Dev', 'Blockchain']
   },
   {
     title: 'Quantum-Secure Decentralized Identity Platform',
@@ -290,48 +263,18 @@ export const projects: Project[] = [
     tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Post-Quantum Libraries (CRYSTALS-Kyber, Dilithium)', 'Python', 'TensorFlow', 'PyTorch', 'AI Classification Models'],
     demo: '',
     github: '',
-    metrics: 'In Progress',
+    metrics: '',
     domains: ['Blockchain', 'AI', 'Dev', 'PQC']
   },
   {
-    title: 'Tunisian Food Supply Chain Tracker',
-    description: 'A mobile-focused platform allowing users to scan products and trace their full production chain, highlighting authenticity and certifications.',
+    title: 'Zero-Knowledge Food Supply Chain Tracker',
+    description: 'A mobile-focused platform that lets users scan Tunisian food products and trace their full production chain, highlighting authenticity and certifications. Supply chain records are verified with zk-SNARKs on Aleo to keep the underlying data private, with optional AI for anomaly detection.',
     image: foodChainTrackerImg,
-    tech: ['React Native', 'React', 'Node.js', 'Supabase'],
+    tech: ['React Native', 'React', 'Node.js', 'Supabase', 'Aleo', 'Leo', 'Aleo SDK', 'IPFS', 'Python'],
     demo: '',
     github: '',
-    metrics: 'Tracked 100+ products from farm to store, 80% user engagement rate',
-    domains: ['Dev', 'Blockchain']
-  },
-  {
-    title: 'SQL Agent',
-    description: 'An AI-powered agent interacting with SQL databases to fetch, update, and manage data intelligently.',
-    image: sqlAgentImg,
-    tech: ['Python', 'Node.js', 'SQL', 'AI Agents', 'Automation'],
-    demo: '',
-    github: '',
-    metrics: 'Automated 1000+ queries, reduced manual database operations by 60%',
-    domains: ['AI', 'Dev']
-  },
-  {
-    title: 'AI-Powered Decentralized Social Media Platform',
-    description: 'A censorship-resistant decentralized social media platform on Ethereum, with AI-driven content moderation and DAO-based governance.',
-    image: decentralizedSocialMediaImg,
-    tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Chainlink', 'Python', 'NLP', 'Reinforcement Learning'],
-    demo: '',
-    github: '',
-    metrics: 'In Progress',
-    domains: ['Blockchain', 'AI', 'Dev']
-  },
-  {
-    title: 'Zero-Knowledge Supply Chain Tracker',
-    description: 'A privacy-preserving supply chain tracker using zk-SNARKs with optional AI for anomaly detection.',
-    image: zkSupplyChainImg,
-    tech: ['Aleo', 'Leo', 'Aleo SDK', 'IPFS', 'Python'],
-    demo: '',
-    github: '',
-    metrics: 'In Progress',
-    domains: ['Blockchain', 'AI', 'Dev']
+    metrics: '',
+    domains: ['Dev', 'Blockchain', 'AI']
   },
   {
     title: 'Post-Quantum Secure Medical Platform',
@@ -344,4 +287,3 @@ export const projects: Project[] = [
     domains: ['Dev', 'PQC']
   }
 ];
-

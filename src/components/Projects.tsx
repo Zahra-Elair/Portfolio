@@ -78,20 +78,11 @@ function FeaturedProject({
 }
 
 function ProjectRow({ project }: { project: Project }) {
-  const inProgress = project.metrics === "In Progress";
-
   return (
     <li className="flex flex-col gap-3 rounded-lg border border-line bg-surface p-5">
-      <div className="flex items-start justify-between gap-3">
-        <h4 className="font-display text-lg font-semibold leading-snug tracking-tight">
-          {project.title}
-        </h4>
-        {inProgress && (
-          <span className="shrink-0 rounded-full border border-line px-2 py-0.5 font-mono text-[11px] text-muted">
-            In progress
-          </span>
-        )}
-      </div>
+      <h4 className="font-display text-lg font-semibold leading-snug tracking-tight">
+        {project.title}
+      </h4>
       <p className="text-sm leading-relaxed text-muted">
         {project.description}
       </p>
@@ -118,9 +109,13 @@ export default function Projects() {
         ))}
       </div>
 
-      <h3 className="mb-6 mt-20 font-mono text-sm text-muted sm:mt-28">
-        More projects
+      <h3 className="mt-20 font-mono text-sm text-muted sm:mt-28">
+        Projects I designed and mentored
       </h3>
+      <p className="mb-6 mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+        Blockchain and security projects I proposed, designed and supervised,
+        built by interns I mentored.
+      </p>
       <ul className="grid gap-4 sm:grid-cols-2">
         {others.map((project) => (
           <ProjectRow key={project.title} project={project} />
