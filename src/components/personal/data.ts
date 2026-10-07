@@ -247,13 +247,26 @@ export const projects: Project[] = [
     domains: ['AI', 'Dev']
   },
   {
+    title: 'Multi-Agent System for Scientific Research',
+    writeups: [
+      { label: "Intern's project post and demo", href: 'https://www.linkedin.com/posts/chaima-attafi_fact-latex-ugcPost-7379238485850767360-FlV6/' },
+    ],
+    description: 'A multi-agent platform for scientific research and content generation. Specialized agents monitor new publications, answer questions over articles with DOI-verified fact-checking, assist with writing and LaTeX export, and generate quizzes, presentations, and podcasts, alongside smart search and real-time community rooms.',
+    image: '',
+    tech: ['FastAPI', 'React', 'LangChain', 'LangGraph', 'CrewAI', 'Agentic RAG', 'Qdrant', 'MySQL', 'Crawl4AI', 'WebSockets'],
+    demo: '',
+    github: '',
+    metrics: '',
+    domains: ['AI', 'Dev']
+  },
+  {
     title: 'AI-Powered Decentralized Social Media Platform',
     writeups: [
       { label: "Intern's write-up on LinkedIn", href: 'https://www.linkedin.com/posts/mohamed-aziz-dridi-a954a52a7_rapportpfedridimohamedaziz-ugcPost-7480227939633172480-dAjG/' },
     ],
-    description: 'A censorship-resistant decentralized social media platform on Ethereum, with AI-driven content moderation and DAO-based governance.',
+    description: 'A decentralized social media platform on Solana that gives users ownership of their identity and data, with no central authority. Sign-in uses embedded wallets, posts are evaluated by AI-based moderation, high-quality posts can be turned into NFTs owned by their creators, and a DAO lets the community govern moderation and how the platform evolves.',
     image: decentralizedSocialMediaImg,
-    tech: ['Ethereum', 'Solidity', 'Hardhat', 'Web3.js', 'IPFS', 'Chainlink', 'Python', 'NLP', 'Reinforcement Learning'],
+    tech: ['Solana', 'Privy', 'IPFS', 'AI Content Moderation', 'DAO Governance', 'NFTs'],
     demo: '',
     github: '',
     metrics: '',

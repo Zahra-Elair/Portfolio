@@ -131,8 +131,8 @@ export default function Projects() {
         Projects I designed and mentored
       </h3>
       <p className="mb-6 mt-2 text-sm leading-relaxed text-muted">
-        Blockchain and security projects I proposed, designed and supervised,
-        built by interns I&nbsp;mentored&nbsp;at&nbsp;Talan.
+        AI, blockchain and security projects I proposed, designed and
+        supervised, built by interns I&nbsp;mentored&nbsp;at&nbsp;Talan.
       </p>
       <ul className="grid gap-4 sm:grid-cols-2">
         {others.map((project) => (
