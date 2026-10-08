@@ -22,9 +22,9 @@ export default function Hero() {
         {personalInfo.name}
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-        I build end-to-end AI-powered applications, from knowledge modeling and
-        LLM workflows with RAG, Graph-RAG, and agents to the APIs and
-        interfaces people actually use.
+        With 2+ years of experience, I build end-to-end AI-powered
+        applications, from knowledge modeling and LLM workflows with RAG,
+        Graph-RAG, and agents to the APIs and interfaces people actually use.
       </p>
       <p className="mt-6 inline-flex items-start gap-3 rounded-md border border-line bg-surface px-4 py-2 text-sm">
         <span className="mt-[0.45em] h-2 w-2 shrink-0 rounded-full bg-accent" />
