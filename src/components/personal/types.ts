@@ -33,6 +33,7 @@ export interface Project {
   video?: string;
   writeups?: { label: string; href: string }[];
   github: string;
+  githubLabel?: string;
   metrics: string;
   domains: string[];
   featured?: boolean;

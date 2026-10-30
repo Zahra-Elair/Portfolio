@@ -45,8 +45,8 @@ export default function ProjectPage() {
         </div>
       </header>
 
-      <div className="mt-12 overflow-hidden rounded-xl border border-line bg-surface sm:mt-16">
-        {project.video ? (
+      {project.video ? (
+        <div className="mt-12 overflow-hidden rounded-xl border border-line bg-surface sm:mt-16">
           <iframe
             src={embedUrl(project.video)}
             title={`${project.title} demo video`}
@@ -55,14 +55,17 @@ export default function ProjectPage() {
             loading="lazy"
             className="aspect-video w-full"
           />
-        ) : (
+        </div>
+      ) : (
+        // Shown at its own size at most, so small images are never stretched blurry
+        <div className="mx-auto mt-12 w-fit max-w-full overflow-hidden rounded-xl border border-line bg-surface sm:mt-16">
           <img
             src={project.image}
             alt={`${project.title} preview`}
-            className="w-full"
+            className="block h-auto max-w-full"
           />
-        )}
-      </div>
+        </div>
+      )}
 
       {details.examplePrompts && (
         <section className="mt-12 sm:mt-16">

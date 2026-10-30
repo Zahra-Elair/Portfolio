@@ -70,7 +70,7 @@ export default function ProjectLinks({
           className={secondary}
         >
           <Github className="h-4 w-4" />
-          Code
+          {project.githubLabel ?? "Code"}
         </a>
       )}
     </div>

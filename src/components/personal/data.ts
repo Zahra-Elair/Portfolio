@@ -242,7 +242,8 @@ export const projects: Project[] = [
     image: tunispeakImg,
     tech: ['Python', 'AraT5', 'Hugging Face Transformers', 'PyTorch', 'FastAPI', 'React', 'TypeScript', 'Vercel'],
     demo: '',
-    github: '',
+    github: 'https://github.com/Zahra-Elair/CorrectDB',
+    githubLabel: 'Corrections app code',
     metrics: '2024 · 1,000+ users, 8,000+ human corrections in the dataset',
     domains: ['AI', 'Dev']
   },
